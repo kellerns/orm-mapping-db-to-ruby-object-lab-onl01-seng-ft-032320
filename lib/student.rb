@@ -65,8 +65,7 @@ class Student
       LIMIT 1
     SQL
 
-    DB[:conn].execute(sql, grade).map do |row|
-      self.new_from_db(row)
+    DB[:conn].execute(sql)
     end
   end
 end
